@@ -1,0 +1,27 @@
+<h1>Lista de productos desde el back</h1>
+<table>
+    <caption>
+        Lista de productos
+    </caption>
+<tr>
+    <th>Id Producto</th>
+    <th>Nombre del Producto</th>
+    <th>Precio Unitario</th>
+    <th>Unidades en Stock</th>
+    <th>Categoría</th>
+</tr>
+@for(item of productos; track item.product_id){
+    <tr>
+        <td>{{item.product_id}}</td>
+        <td>{{item.nombreProducto}}</td>
+        <td>{{item.precioUnitario}}</td>
+        <td>{{item.unidadesStock}}</td>
+        <td>{{item.categoria}}</td>
+        <td><button type="button" [routerLink]="['edicion',item.product_id]">Modificar</button></td>
+        <td><button type="button" (click)="eliminarProducto(item.product_id)">Eliminar</button></td>
+    </tr>
+    }
+</table>
+<button routerLink="alta">Alta de un nuevo producto</button>
+<router-outlet></router-outlet>
+

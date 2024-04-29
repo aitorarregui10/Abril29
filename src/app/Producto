@@ -1,0 +1,7 @@
+export interface Producto {
+  product_id: number;
+  nombreProducto: string;
+  precioUnitario: number;
+  unidadesStock: number;
+  categoria: number;
+}

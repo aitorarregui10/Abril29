@@ -1,0 +1,22 @@
+<h1>Producto</h1>
+
+<div>
+   <form [formGroup]="form" #frmProducto="ngForm" (ngSubmit)="operar()">
+                
+        <label for="">Id del Producto</label>
+        <input placeholder="product_id" required formControlName="product_id">
+        <label for="">Nombre</label>
+        <input placeholder="nombreProducto" required formControlName="nombreProducto">
+        <label for="">Precio</label>
+        <input placeholder="precioUnitario" required formControlName="precioUnitario">
+        <label for="">Unidades en Stock</label>
+        <input placeholder="unidadesStock" required formControlName="unidadesStock">
+        <label for="">Categoría</label>
+        <input placeholder="categoria" required formControlName="categoria">
+       
+        <button type="submit" [disabled]="frmProducto.invalid">Aceptar</button>
+        <button type="button" routerLink=""  >Cancelar</button>
+    
+    </form>   
+
+</div>
